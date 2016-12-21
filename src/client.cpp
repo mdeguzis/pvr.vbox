@@ -325,7 +325,7 @@ extern "C" {
   {
   }
 
-  PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
+  void GetCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
   {
     pCapabilities->bSupportsTV = true;
     pCapabilities->bSupportsRadio = true;
@@ -355,8 +355,6 @@ extern "C" {
       pCapabilities->bSupportsRecordings = true;
       pCapabilities->bSupportsTimers = true;
     }
-
-    return PVR_ERROR_NO_ERROR;
   }
 
   const char *GetBackendName(void)
